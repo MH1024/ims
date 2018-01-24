@@ -1,2 +1,2 @@
 # ims
-MEAN stack for Inventory Management
+Nodejs and mongoDB for Inventory Management
