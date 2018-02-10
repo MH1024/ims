@@ -43,5 +43,18 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+//session
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+app.use(session({
+  secret: settings.cookieSercert,
+  key: settings.db,
+  cookie: {maxxAge: 1000 * 60 * 60 * 24 * 30},
+  store: new MongoStore({
+    db: settings.db,
+    host: settings.host,
+    port: settings.port
+  })
+}));
 
 module.exports = app;
