@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <h1><%= title %></h1>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <form method="post">
+      User: <input type="text" name="name"/><br>
+      Password: <input type="password" name="password"/><br>
+    <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
