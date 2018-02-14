@@ -1,6 +1,7 @@
 // Uncomment if using Node
 // var chai = require('chai');
 var assert = chai.assert;
+var expect = chai.expect;
 
 // var className = require('../js/className.js');
 // var addClass = className.addClass;
@@ -31,4 +32,12 @@ describe('addClass', function() {
     var classes = element.className.split(' ');
     assert.equal(classes[1], 'new-class');
   });
+});
+
+
+describe('add', function() {
+  it('should add numbers', function() {
+    expect(add(1,1)).to.be.equal(2);
+
+      });
 });
