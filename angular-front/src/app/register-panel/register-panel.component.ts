@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { authService, TokenPayload } from '../services/auth-service.service';
+import { AuthService, TokenPayload } from '../services/auth-service.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +14,7 @@ export class RegisterPanelComponent {
     password: ''
   };
 
-  constructor(private auth: authService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router) {}
 
   register() {
     this.auth.register(this.credentials).subscribe(() => {

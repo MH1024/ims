@@ -23,7 +23,7 @@ export interface TokenPayload {
 }
 
 @Injectable()
-export class authService {
+export class AuthService {
   private token: string;
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -64,5 +64,4 @@ export class authService {
   public register(user: TokenPayload): Observable<any> {
     return this.request('post', 'register', user);
   }
-
 }
